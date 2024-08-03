@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:13551/job-service
+    username: job-service
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db-changelog.xml
+
+  docker:
+    compose:
+      skip:
+        in-tests: false
